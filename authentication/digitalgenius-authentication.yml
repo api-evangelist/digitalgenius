@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.digitalgenius.com/docs/create-basic-token
+docs: https://docs.digitalgenius.com/docs/create-basic-token
+summary:
+  types: [http]
+  http_schemes: [basic]
+  identity_provider: Auth0
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication using an encoded token built from an API key and
+    secret created in the DigitalGenius Dashboard. For the MCP server and HTTP API,
+    the encoded token is passed as `Authorization: Basic {{AUTH_TOKEN}}`. API keys
+    are created in the Dashboard with a selectable Access Type (e.g. "All").
+  header: 'Authorization: Basic {{AUTH_TOKEN}}'
+  token_creation: >-
+    Dashboard -> create API key (name + Access Type) -> "Copy Encoded Token".
+platform_identity:
+  provider: Auth0
+  evidence: https://status.digitalgenius.com/
+  components:
+  - User Authentication
+  - Machine-to-Machine Authentication
+  - Multi-factor Authentication
+  - Management API
+  note: >-
+    The DigitalGenius platform (Dashboard, M2M) is fronted by Auth0 per the public
+    status page. Programmatic API/MCP access uses the Basic encoded token above.
