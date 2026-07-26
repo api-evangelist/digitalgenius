@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://status.digitalgenius.com/
+status_page: https://status.digitalgenius.com/
+status_platform: Atlassian Statuspage
+status_components:
+  eu: [Flow Engine, AI, Dashboard, Chat Widget]
+  us: [Flow Engine, AI, Dashboard, Chat Widget]
+  dependencies:
+  - Pusher Channels
+  - AWS (DynamoDB, ECS, EC2, ELB, Lambda, RDS; eu-central-1 and us-west-2)
+  - Auth0
+uptime_observed: '99.99%-100% over the trailing 90 days (per status page)'
+regions: [eu, us]
+versioning:
+  scheme: unknown
+  note: >-
+    No public versioning or deprecation policy page was found. The API is documented
+    at docs.digitalgenius.com without a published version/sunset (RFC 8594) policy.
+deprecation:
+  policy_url: null
+  note: No published deprecation/sunset policy located.

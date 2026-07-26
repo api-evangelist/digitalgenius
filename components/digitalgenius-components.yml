@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.digitalgenius.com/docs/headless-chat-sdk
+components:
+- family: Genius Chat (Headless Chat SDK)
+  description: >-
+    Client-side, embeddable chat widget SDK for building customized chat experiences
+    powered by DigitalGenius. Early-release; documentation and API may change.
+  loader: https://chat.digitalgenius.com/init-sdk.js
+  global_config: window.DG_SDK_CONFIG
+  global_object: window.DGChatSDK
+  ready_event: onDGSDKScriptLoaded
+  config_fields:
+  - widgetId
+  - env  # 'eu' | 'us' | 'dev.us'
+  - generalSettings.persistSession
+  methods:
+  - init
+  - sendMessage
+  - startConversation
+  - endConversation
+  - restartConversation
+  - isExistingSession
+  event_listeners:
+  - onMessage
+  - onSystemEvent
+  packages:
+  - "@digitalgenius/widget-components (npm)"
+  - genius-chat-expo (npm, React Native/Expo)
+  - genius-chat-widget-sdk-ios (SPM)
+  - genius-chat-widget-sdk-android
+  - genius-chat-widget-sdk-expo

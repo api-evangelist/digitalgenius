@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.digitalgenius.com/
+authentication:
+  style: http-basic
+  detail: authentication/digitalgenius-authentication.yml
+regional_routing:
+  description: >-
+    API and MCP surfaces are region-scoped. Callers select an EU or US host; the
+    Chat SDK selects region via the `env` config ('eu' | 'us' | 'dev.us').
+  hosts:
+    eu: https://flow-server.eu.dgdeepai.com
+    us: https://flow-server.us.dgdeepai.com
+webhooks:
+  supported: true
+  detail: asyncapi/digitalgenius-webhooks.yml
+  note: >-
+    DigitalGenius flows consume inbound webhooks from connected helpdesk/CX platforms
+    (Zendesk, Freshchat, Freshdesk, Kustomer, Gorgias) and expose a generic
+    "Create Webhook" flow action.
+idempotency:
+  supported: false
+  note: No documented idempotency-key contract was found; not asserted.
+pagination:
+  style: unknown
+  note: No cross-cutting pagination contract documented publicly.
+realtime:
+  transport: Pusher Channels (WebSocket)
+  evidence: https://status.digitalgenius.com/
+error_envelope:
+  note: >-
+    No published RFC 9457 problem+json contract or error-code registry located in
+    public docs; flow actions surface upstream carrier/helpdesk errors.
+cross_links:
+  authentication: authentication/digitalgenius-authentication.yml
+  lifecycle: lifecycle/digitalgenius-lifecycle.yml
+  mcp: mcp/digitalgenius-mcp.yml

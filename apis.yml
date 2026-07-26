@@ -1,8 +1,28 @@
 aid: digitalgenius
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/digitalgenius.png
 name: DigitalGenius
-description: DigitalGenius is a company surfaced as a portfolio company of bloomberg-beta and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  DigitalGenius is an AI agent platform purpose-built for ecommerce and retail customer
+  service. It automates pre- and post-purchase support, fully resolving customer issues
+  such as order tracking, returns and exchanges, subscription management, and warranty
+  claims by orchestrating "flows" that deeply integrate with a brand's existing systems
+  (helpdesks like Zendesk, Freshchat, Freshdesk, Kustomer, Gorgias and Salesforce Service
+  Cloud, plus dozens of carriers, WMS/OMS and logistics providers). Developers connect via
+  a documented HTTP API, an embeddable Genius Chat headless SDK (web, iOS, Android, Expo),
+  and an official hosted Model Context Protocol (MCP) server, with region-scoped EU and US
+  hosts and Auth0-backed platform authentication.
 url: https://raw.githubusercontent.com/api-evangelist/digitalgenius/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +32,32 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Customer Service
+- Ecommerce
+- Artificial Intelligence
+- AI Agents
+- Conversational AI
+- Customer Support Automation
+- Retail
+- MCP
+apis:
+- name: DigitalGenius API
+  description: >-
+    HTTP API and flow-execution surface for DigitalGenius AI agents, including generic
+    DG API calls, flow execution, JSON handling, and the hosted MCP server. Region-scoped
+    EU/US hosts, HTTP Basic (encoded token) authentication.
+  humanURL: https://docs.digitalgenius.com/
+  baseURL: https://flow-server.eu.dgdeepai.com
+  properties:
+  - type: Documentation
+    url: https://docs.digitalgenius.com/
+  - type: Authentication
+    url: authentication/digitalgenius-authentication.yml
+  - type: MCPServer
+    url: mcp/digitalgenius-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +66,50 @@ maintainers:
 common:
 - type: Website
   url: http://www.digitalgenius.com/
+- type: DeveloperPortal
+  url: https://docs.digitalgenius.com/
+- type: Documentation
+  url: https://docs.digitalgenius.com/
+- type: APIReference
+  url: https://docs.digitalgenius.com/docs/generic-digitalgenius-api-call
+- type: GettingStarted
+  url: https://docs.digitalgenius.com/docs/create-basic-token
+- type: Support
+  url: https://docs.digitalgenius.com/docs/create-a-ticket-on-support-portal.md
+- type: StatusPage
+  url: https://status.digitalgenius.com/
+- type: TermsOfService
+  url: https://www.digitalgenius.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.digitalgenius.com/privacy-policy
+- type: SignUp
+  url: https://www.digitalgenius.com/sign-in
+- type: GitHubOrganization
+  url: https://github.com/DigitalGenius
+- type: MCPServer
+  url: mcp/digitalgenius-mcp.yml
+- type: LLMsTxt
+  url: llms/digitalgenius-llms.txt
+- type: Authentication
+  url: authentication/digitalgenius-authentication.yml
+- type: Packages
+  url: packages/digitalgenius-packages.yml
+- type: SDKs
+  url: packages/digitalgenius-packages.yml
+- type: Components
+  url: components/digitalgenius-components.yml
+- type: Conventions
+  url: conventions/digitalgenius-conventions.yml
+- type: Webhooks
+  url: asyncapi/digitalgenius-webhooks.yml
+- type: Lifecycle
+  url: lifecycle/digitalgenius-lifecycle.yml
+- type: DomainSecurity
+  url: security/digitalgenius-domain-security.yml
+- type: TrustCenter
+  url: security/digitalgenius-trust-center.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

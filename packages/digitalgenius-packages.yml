@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.npmjs.com/org/digitalgenius + https://github.com/DigitalGenius
+note: >-
+  DigitalGenius ships client-side Genius Chat Widget SDKs. There is no server-side
+  REST client library published to npm/PyPI; server integration is via the documented
+  HTTP API and the hosted MCP server. Packages below are the first-party embeddable
+  chat/widget SDKs.
+packages:
+- language: javascript
+  registry: npm
+  name: "@digitalgenius/widget-components"
+  url: https://www.npmjs.com/package/@digitalgenius/widget-components
+  install: npm install @digitalgenius/widget-components
+  version: 1.0.22
+  official: true
+  description: DigitalGenius Widget Components.
+- language: javascript
+  registry: npm
+  name: genius-chat-expo
+  url: https://www.npmjs.com/package/genius-chat-expo
+  install: npm install genius-chat-expo
+  version: 2.0.0
+  official: true
+  description: Digital Genius Chat Expo Module (React Native / Expo).
+- language: swift
+  registry: swift-package-manager
+  name: genius-chat-widget-sdk-ios
+  url: https://github.com/DigitalGenius/genius-chat-widget-sdk-ios
+  install: 'SPM: https://github.com/DigitalGenius/genius-chat-widget-sdk-ios'
+  official: true
+  description: Genius Chat iOS SDK on Swift Package Manager.
+- language: kotlin
+  registry: github
+  name: genius-chat-widget-sdk-android
+  url: https://github.com/DigitalGenius/genius-chat-widget-sdk-android
+  install: 'See repo README'
+  official: true
+  description: Genius Chat SDK for Android.
+- language: kotlin
+  registry: github
+  name: genius-chat-widget-sdk-expo
+  url: https://github.com/DigitalGenius/genius-chat-widget-sdk-expo
+  install: 'See repo README'
+  official: true
+  description: Genius Chat Expo (React Native) widget SDK.

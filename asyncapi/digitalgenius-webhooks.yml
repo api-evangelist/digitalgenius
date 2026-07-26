@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+spec_type: Webhooks
+source: https://docs.digitalgenius.com/llms.txt
+note: >-
+  DigitalGenius does not publish an AsyncAPI document. It documents a webhook surface
+  used to connect helpdesk/CX platforms into DigitalGenius flows, plus a generic
+  flow action to create webhooks. Realtime chat delivery is carried over Pusher
+  Channels (WebSocket) per the public status page. Catalog below references the
+  real documented webhook setup pages; DigitalGenius is primarily the webhook
+  consumer/configurator, not a fan-out event publisher.
+webhooks:
+- name: Generic Create Webhook (flow action)
+  docs: https://docs.digitalgenius.com/docs/create-webhook.md
+- name: Freshchat Webhook Setup
+  docs: https://docs.digitalgenius.com/docs/webhook.md
+- name: Zendesk Trigger (Master Flow)
+  docs: https://docs.digitalgenius.com/docs/trigger.md
+- name: Zendesk Analytics Flow Trigger
+  docs: https://docs.digitalgenius.com/docs/dg-analytics-webhook.md
+- name: Kustomer Webhook (Master)
+  docs: https://docs.digitalgenius.com/docs/add-digitalgenius-kustomer-webhook-master.md
+- name: Kustomer Webhook (Analytics)
+  docs: https://docs.digitalgenius.com/docs/add-digitalgenius-kustomer-webhook-analytics.md
+realtime:
+  transport: Pusher Channels
+  evidence: https://status.digitalgenius.com/
