@@ -12,9 +12,8 @@ server:
 authentication:
   scheme: http-basic
   header: 'Authorization: Basic {{AUTH_TOKEN}}'
-  note: >-
-    Encoded token created in the DigitalGenius Dashboard (create an API key with
-    Access Type "All", then use the "Copy Encoded Token" option).
+  note: Encoded token created in the DigitalGenius Dashboard (create an API key with Access Type "All",
+    then use the "Copy Encoded Token" option).
 clients:
 - Claude Desktop
 - Claude Code
@@ -31,7 +30,12 @@ tool_families:
   description: View conversation transcripts and search tickets.
 - name: configuration-audit
   description: Inspect variables, connections, and widget configuration.
-notes: >-
-  Official hosted remote MCP server documented by DigitalGenius. Individual tool
-  names/schemas are not enumerated verbatim in the public docs; families above are
-  as described on the MCP docs page.
+notes: Official hosted remote MCP server documented by DigitalGenius. Individual tool names/schemas are
+  not enumerated verbatim in the public docs; families above are as described on the MCP docs page.
+deployment:
+  mode: remote
+  endpoint: https://flow-server.eu.dgdeepai.com/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
