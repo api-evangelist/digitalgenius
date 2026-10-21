@@ -18,6 +18,13 @@ checked:
 - https://repo1.maven.org/maven2
 - https://rubygems.org/api/v1
 - https://zapier.com/apps/digitalgenius/integrations
+- https://appexchange.salesforce.com/explore/business-needs?category=commerce
+- https://commercetools.com/partners
+- https://machalliance.org/members
+- https://marketplace.commercetools.com
+- https://printify.com/integrations/
+- https://www.bigcommerce.com/apps/
+- https://www.printful.com/integrations
 summary: null
 marketplace_apps: []
 edges:
@@ -67,4 +74,38 @@ edges:
   listing_count: 1
   detected: '2026-10-19'
   detected_by: mirror-platform-listings.py
+- partner_name: MACH Alliance
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://machalliance.org/members/digitalgenius
+  category: composable (MACH) commerce alliance membership
+  contract_reference:
+    register: MACH Alliance members directory (machalliance.org/members)
+    standard: MACH Alliance (Microservices, API-first, Cloud-native SaaS, Headless)
+    spec_file: null
+    role: mach-certified-vendor
+    registered_name: DigitalGenius
+    register_id: digitalgenius
+    register_category: MACH Certified ISVs
+    register_country: null
+    matched_domain: digitalgenius.com
+    matched_by: domain
+    signal_note: certified_products = ONE entry for the vendor's MACH certification (the Alliance certifies the
+      vendor against the MACH criteria; no per-product list); awards and self-listed partnerships are context, never
+      counted
+    detected_by: sweep-mach-headless-commerce.py
+    detected: '2026-10-20'
+    certified_products:
+    - product: MACH certified ISV
+      product_type: MACH certified ISV
+      certifier: MACH Alliance
+      lapsed: false
+    awards_context:
+    - Agent Ready Award 2026
+  detected_by: sweep-mach-headless-commerce.py
+  first_seen: '2026-10-20'
 templates: []
